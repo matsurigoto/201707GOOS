@@ -1,6 +1,7 @@
-﻿Feature: BudgetController
+﻿
+Feature: BudgetController
 
-@mytag
+@CleanBudgets
 Scenario: Add a budget record
         When add a budget
         | Amount | Month   |
