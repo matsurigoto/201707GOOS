@@ -5,6 +5,7 @@ using System.Text;
 using FluentAutomation;
 using GOOS_Sample.DataModels;
 using GOOS_Sample.Interfaces;
+using GOOS_Sample.Models;
 using GOOS_Sample.Services;
 using Microsoft.Practices.Unity;
 using TechTalk.SpecFlow;
@@ -65,6 +66,7 @@ namespace GOOS_SampleTests
         {
             UnityContainer = new UnityContainer();
             UnityContainer.RegisterType<IBudgetService, BudgetService>();
+            UnityContainer.RegisterType<IRepository<Budgets>, BudgetRepository>();
         }
         public static IUnityContainer UnityContainer
         {

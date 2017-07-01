@@ -210,6 +210,8 @@
       <DependentUpon>GooExamplePRD.edmx</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\IBudgetService.cs" />
+    <Compile Include="Interfaces\IRepository.cs" />
+    <Compile Include="Models\BudgetRepository.cs" />
     <Compile Include="Services\BudgetService.cs" />
     <Compile Include="ViewModels\BudgetAddViewModel.cs" />
     <Compile Include="Controllers\BudgetController.cs" />

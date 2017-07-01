@@ -10,14 +10,18 @@ namespace GOOS_Sample.Services
 {
     public class BudgetService : IBudgetService
     {
+        private IRepository<Budgets> _budgetRepository;
+
+        public BudgetService(IRepository<Budgets> budgetRepository)
+        {
+            _budgetRepository = budgetRepository;
+        }
+
         public void Create(BudgetAddViewModel model)
         {
-            using (var dbcontext = new GoosExamplePRDEntities())
-            {
-                var budget = new Budgets() { Amount = model.Amount, YearMonth = model.Month };
-                dbcontext.Budgets.Add(budget);
-                dbcontext.SaveChanges();
-            }
+
+            var budget = new Budgets() { Amount = model.Amount, YearMonth = model.Month };
+            this._budgetRepository.Save(budget);
         }
     }
 }
