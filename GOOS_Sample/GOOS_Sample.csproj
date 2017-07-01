@@ -188,6 +188,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GooExamplePRD.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\IBudgetService.cs" />
+    <Compile Include="Services\BudgetService.cs" />
     <Compile Include="ViewModels\BudgetAddViewModel.cs" />
     <Compile Include="Controllers\BudgetController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
