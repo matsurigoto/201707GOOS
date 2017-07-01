@@ -23,5 +23,8 @@ namespace GOOS_Sample.Services
             var budget = new Budgets() { Amount = model.Amount, YearMonth = model.Month };
             this._budgetRepository.Save(budget);
         }
+
+        public event EventHandler Created;
+        public event EventHandler Updated;
     }
 }
