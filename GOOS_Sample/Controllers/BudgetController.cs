@@ -13,11 +13,6 @@ namespace GOOS_Sample.Controllers
     public class BudgetController : Controller
     {
 
-        public BudgetController()
-        {
-            this.budgetService = new BudgetService();
-        }
-
         private IBudgetService budgetService;
 
         public BudgetController(IBudgetService budgetService)

@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using FluentAutomation;
 using GOOS_Sample.DataModels;
+using GOOS_Sample.Interfaces;
+using GOOS_Sample.Services;
+using Microsoft.Practices.Unity;
 using TechTalk.SpecFlow;
 
 namespace GOOS_SampleTests
@@ -54,6 +57,19 @@ namespace GOOS_SampleTests
 
                 dbcontext.SaveChangesAsync();
             }
+        }
+
+
+        [BeforeTestRun()]
+        public static void RegisterDIContainer()
+        {
+            UnityContainer = new UnityContainer();
+            UnityContainer.RegisterType<IBudgetService, BudgetService>();
+        }
+        public static IUnityContainer UnityContainer
+        {
+            get;
+            set;
         }
     }
 }
