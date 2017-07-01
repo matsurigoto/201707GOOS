@@ -10,13 +10,6 @@ namespace GOOS_Sample.Models
     {
         public void Save(Budgets entity)
         {
-            //using (var dbcontext = new GoosExamplePRDEntities())
-            //{
-            //    var budget = new Budgets() { Amount = entity.Amount, YearMonth = entity.YearMonth };
-            //    dbcontext.Budgets.Add(budget);
-            //    dbcontext.SaveChanges();
-            //}
-
             using (var dbcontext = new GoosExamplePRDEntities())
             {
                 var budgetFromDb = dbcontext.Budgets.FirstOrDefault(x => x.YearMonth == entity.YearMonth);
