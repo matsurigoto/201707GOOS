@@ -10,7 +10,7 @@ namespace GOOS_SampleTests.steps
 
         public BudgetCreatePage(FluentTest test) : base(test)
         {
-            this.Url = $"{PageContext.Domain}/budget/add";
+            this.Url = $"{PageContext.Domain}/Budget/Add";
         }
 
         public BudgetCreatePage Amount(int amount)
