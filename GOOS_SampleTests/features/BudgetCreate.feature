@@ -16,3 +16,5 @@ Scenario: Add a budget when there was existed a record of unique month
         | 999    | 2017-10   |
         When I add a buget 2000 for "2017-10"
         Then it should display "updated successfully"
+
+		

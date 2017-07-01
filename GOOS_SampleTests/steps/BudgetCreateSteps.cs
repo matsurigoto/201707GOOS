@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Web.Mvc;
+using FluentAssertions;
 using FluentAutomation;
 using GOOS_SampleTests.DataModelForIntegrationTest;
 using TechTalk.SpecFlow;
@@ -48,19 +50,20 @@ namespace GOOS_SampleTests.steps
         }
 
 
-        [Given(@"Budget table existed budgets")]
-        public void GivenBudgetTableExistedBudgets(Table table)
-        {
+        //[Given(@"Budget table existed budgets")]
+        //public void GivenBudgetTableExistedBudgets(Table table)
+        //{
 
-            var budgets = table.CreateSet<Budgets>();
-            using (var dbcontext = new GoosExampleEntities())
-            {
-                dbcontext.Budgets.AddRange(budgets);
-                dbcontext.SaveChanges();
-            }
-        }
+        //    var budgets = table.CreateSet<Budgets>();
+        //    using (var dbcontext = new GoosExampleEntities())
+        //    {
+        //        dbcontext.Budgets.AddRange(budgets);
+        //        dbcontext.SaveChanges();
+        //    }
+        //}
 
-
+        
+ 
 
     }
 
